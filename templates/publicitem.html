@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+	<h3 class="text-title">{{item.name}} ({{ catalog.name }})</h3>
+	<p>{{item.description}}</p>
+
+	{% block editItemButton %}
+	{% endblock %}
+
+	<a class="btn btn-default" href="{{url_for('showSingleCatalog', catalog_name=catalog.name)}}" role="button">
+		Back
+	</a>
+
+{% endblock %}

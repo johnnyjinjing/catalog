@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block content %}
+	<h3 class="text-title">Edit Item: {{item.name}} in Catalog: {{catalog.name}}</h3>
+	<form action="#" method="post">
+		<div class="form-group">
+			<label>Old name: {{item.name}}</label><br>
+			<label for="name">New name:</label>
+			<input type ="text" class="form-control" max-width="20px" maxlength="100" name="name">
+			<label>Old description: {{item.description}}</label><br>
+			<label for="description">New discription:</label>
+			<textarea class="form-control" name="description" row="5"></textarea>
+			<div class="break"></div>
+			<button type="submit" class="btn btn-primary">Edit</button>
+			<a class="btn btn-default" href="{{url_for('showSingleCatalog', catalog_name=catalog.name)}}" role="button">
+				Cancel
+			</a>
+		</div>
+	</form>
+{% endblock %}

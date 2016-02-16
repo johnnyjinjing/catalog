@@ -1,0 +1,20 @@
+.header {
+	background-color: #002058;
+	color: #FFFFFF;
+}
+
+.text-title {
+	color: #002058;
+}
+
+.text-list {
+	color: #E87722;
+}
+
+.login-text {
+	padding-top: 10px;
+}
+
+.break {
+	padding-top: 20px;
+}

@@ -1,0 +1,10 @@
+{% block leftPane %}
+	<a href = "{{ url_for('showCatalogs') }}">
+		<h2 class="text-title">Catagories</h2>
+	</a>
+	{% for catalog in catalogs %}
+		<a href = "{{ url_for('showSingleCatalog', catalog_name=catalog.name) }}">
+			<h3 class="text-list">{{ catalog.name }}</h3>
+		</a>
+	{% endfor %}
+{% endblock %}

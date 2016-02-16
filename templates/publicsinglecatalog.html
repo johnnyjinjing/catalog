@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+	<h3 class="text-title">{{catalog.name}}</h3>
+
+	{% block editCatalogButton %}
+	{% endblock %}
+
+	{% for item in items %}
+		<a href = "{{ url_for('showItem', catalog_name=catalog.name, item_name=item.name) }}">
+		<h4 class="text-list">{{item.name}}</h4>
+	{% endfor %}
+
+	{% block editItemButton %}
+	{% endblock %}
+{% endblock %}

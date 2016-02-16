@@ -1,0 +1,11 @@
+{% extends "publicsinglecatalog.html" %}
+
+{% block editCatalogButton %}
+	<a class="btn btn-primary" href="{{url_for('editCatalog', catalog_name=catalog.name)}}" role="button">Edit catalog</a>
+	<a class="btn btn-danger" href="{{url_for('deleteCatalog', catalog_name=catalog.name)}}" role="button">Delete catalog</a>
+	<div class="break"></div>
+{% endblock %}
+
+{% block editItemButton %}
+	<a class="btn btn-primary" href="{{url_for('newItem', catalog_name=catalog.name)}}" role="button">Add item</a>
+{% endblock %}

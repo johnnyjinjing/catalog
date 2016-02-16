@@ -1,0 +1,8 @@
+{% extends "main.html" %}
+
+{% block content %}
+	<h3 class="text-title">Catalog: {{catalog.name}} already exists</h3>
+	<a class="btn btn-primary" href="{{url_for('showSingleCatalog', catalog_name=catalog.name)}}" role="button">
+		Back
+	</a>
+{% endblock %}

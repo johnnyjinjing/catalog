@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+	<h3 class="text-title">Add new catalog</h3>
+	<form action="#" method="post">
+		<div class="form-group">
+			<label for="name">Name:</label>
+			<input type ="text" class="form-control" max-width="20px" maxlength="100" name="name">
+			<div class="break"></div>
+			<button type="submit" class="btn btn-primary">Add</button>
+			<a class="btn btn-default" href="{{url_for('showCatalogs')}}" role="button">
+				Cancel
+			</a>
+		</div>
+	</form>
+{% endblock %}
